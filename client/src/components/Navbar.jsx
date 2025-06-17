@@ -64,9 +64,7 @@ const Navbar = () => {
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Portfolio
-              </span>
+              <span className="text-2xl font-bold text-black">MB</span>
             </Link>
           </motion.div>
 

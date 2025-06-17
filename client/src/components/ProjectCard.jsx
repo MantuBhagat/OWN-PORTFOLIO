@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }) => {
   // useEffect(() => {
@@ -35,6 +36,12 @@ const ProjectCard = ({ project }) => {
         >
           View Project
         </a>
+
+        <div>
+          <Link to={`/projects/${project._id}`} />
+          <button className="text-blue-500 underline">View Project</button>
+        </div>
+
         <div className="flex space-x-4">
           {project.github && (
             <a

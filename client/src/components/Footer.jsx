@@ -14,14 +14,13 @@ const Footer = () => {
         <p className="text-sm mb-4">
           © {new Date().getFullYear()} Mantu Kumar Bhagat. All rights reserved.
         </p>
-        <div className="flex justify-center mt-4 absolute bottom-0 left-30 transform -translate-x-1/2">
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="p-6 rounded-full bg-gray-800 hover:border-4 border-purple-600 transition duration-300 mt-4"
-          >
-            <FaArrowUp />
-          </button>
-        </div>
+
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className=" p-2 rounded-full bg-gray-700 transition duration-300 mt-4"
+        >
+          <FaArrowUp />
+        </button>
       </div>
     </motion.footer>
   );

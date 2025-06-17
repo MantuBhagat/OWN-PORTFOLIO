@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Hireme from "./pages/Hireme";
 import ProjectForm from "./components/ProjectForm";
+import ProjectView from "./pages/ProjectView";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/hireme" element={<Hireme />} />
         <Route path="/add-project" element={<ProjectForm />} />
+        <Route path="/projects/:Id" element={<ProjectView />} />
       </Routes>
 
       <Footer />
