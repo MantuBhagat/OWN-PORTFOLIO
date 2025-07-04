@@ -4,13 +4,6 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }) => {
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:5000/api/projects") // Your backend endpoint
-  //     .then((res) => console.log("Projects fetched:", res.data))
-  //     .catch((err) => console.error("Error fetching projects:", err));
-  // }, []);
-
   return (
     <div className="p-4 bg-white rounded shadow-md hover:shadow-lg transition">
       <motion.div
@@ -36,11 +29,6 @@ const ProjectCard = ({ project }) => {
         >
           View Project
         </a>
-
-        <div>
-          <Link to={`/projects/${project._id}`} />
-          <button className="text-blue-500 underline">View Project</button>
-        </div>
 
         <div className="flex space-x-4">
           {project.github && (

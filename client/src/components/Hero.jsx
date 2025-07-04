@@ -37,15 +37,14 @@ const Hero = () => {
           <p className="text-center font-bold text-4xl">
             +50
             <br />
-            <small className="md:text-xl sm:text-base text-gray-500 flex">
-              {" "}
+            <small className="md:text-xl sm:text-base text-gray-500 flex w-full max-w-full">
               projects completed
             </small>
           </p>
           <p className="text-center font-bold text-4xl">
             +170
             <br />
-            <small className="md:text-xl sm:text-base text-gray-500 flex">
+            <small className="md:text-xl sm:text-base text-gray-500 flex w-full max-w-full">
               Git repositories
             </small>
           </p>
@@ -56,9 +55,9 @@ const Hero = () => {
         <img
           src={profile}
           alt="Mantu Bhagat"
-          className="w-full rounded-[60px] h-full object-cover "
+          className="w-full h-full object-cover  transition-transform rounded-[0_32px_0_32px] "
         />
-        <div className="absolute bottom-0 left-0 bg-white p-2 rounded-[0_30px_0_30px] transition">
+        <div className="absolute bottom-0 left-0 bg-white p-2 rounded-[0_30px_0_30px] transition ">
           <div className="flex justify-center items-center space-x-4 bg-black p-2 rounded-full text-white">
             <FaGithub className="text-xl" />
           </div>

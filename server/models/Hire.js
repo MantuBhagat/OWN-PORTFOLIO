@@ -9,7 +9,6 @@ const hireSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
-      
     },
     project_type: {
       type: String,

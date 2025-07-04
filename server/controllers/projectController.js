@@ -1,4 +1,7 @@
 import Projects from "../models/Projects.js";
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+dotenv.config();
 
 // Function to get all projects
 export const getProjects = async (req, res) => {
@@ -15,6 +18,7 @@ export const createProject = async (req, res) => {
   const project = new Projects(req.body);
   try {
     const savedProject = await project.save();
+
     res.status(201).json(savedProject);
   } catch (error) {
     res.status(400).json({ message: error.message });
