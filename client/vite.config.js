@@ -4,17 +4,23 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  theme: {
-    extend: {
-      colors: {
-        primary: "#1E40AF", // Example primary color
-        secondary: "#FBBF24", // Example secondary color
+  themes: {
+    default: "light",
+    themes: {
+      light: {
+        primary: "#4f46e5",
+        secondary: "#f59e0b",
+        accent: "#ec4899",
+        neutral: "#f3f4f6",
+        "base-100": "#ffffff",
       },
-      fontFamily: {
-        sans: ["Inter", "sans-serif"], // Example font family
+      dark: {
+        primary: "#6366f1",
+        secondary: "#f59e0b",
       },
     },
   },
+
   server: {
     proxy: {
       "/api": {
