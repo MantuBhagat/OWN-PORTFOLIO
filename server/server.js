@@ -13,7 +13,7 @@ connectDB();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://own-portfolio-psi-six.vercel.app/",
+    origin: "*",
   })
 );
 
