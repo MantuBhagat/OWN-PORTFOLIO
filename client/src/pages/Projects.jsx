@@ -7,7 +7,7 @@ const Projects = () => {
 
   useEffect(() => {
     axios
-      .get("https://own-portfolio-1-wyqk.onrender.com/api/projects")
+      .get("/api/projects")
       .then((res) => {
         setProjects(res.data);
       })

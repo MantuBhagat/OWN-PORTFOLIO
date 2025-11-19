@@ -11,7 +11,7 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="dark:bg-black bg-slate-50"
+      className="w-full h-auto flex flex-col items-center justify-center gap-10"
     >
       <Hero />
       {/* <About />
