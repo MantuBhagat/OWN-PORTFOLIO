@@ -17,7 +17,7 @@ const ProjectForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:5000/api/projects`, form);
+      await axios.post(`/api/projects`, form);
       alert("Project added successfully!");
       setForm({
         title: "",

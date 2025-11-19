@@ -7,7 +7,7 @@ const Projects = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/projects")
+      .get("https://own-portfolio-1-wyqk.onrender.com/api/projects")
       .then((res) => {
         setProjects(res.data);
       })

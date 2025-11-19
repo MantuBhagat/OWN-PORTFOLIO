@@ -13,7 +13,7 @@ import ProjectView from "./pages/ProjectView";
 const App = () => {
   return (
     <div className="">
-      <Navbar />
+      <Navbar className="sticky top-0" />
 
       <Routes>
         <Route path="/" element={<Home />} />
