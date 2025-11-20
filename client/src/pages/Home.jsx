@@ -1,9 +1,6 @@
-import Hero from "../components/Hero";
 import { motion } from "framer-motion";
-import About from "./About";
-import Contact from "./Contact";
-import Projects from "./Projects";
-import Skills from "./Skills";
+import FeatureProjects from "../components/FeatureProjects";
+import Hero from "../components/Hero";
 
 const Home = () => {
   return (
@@ -14,10 +11,7 @@ const Home = () => {
       className=" flex flex-col items-center justify-center gap-10"
     >
       <Hero />
-      {/* <About />
-      <Projects />
-      <Skills />
-      <Contact /> */}
+      <FeatureProjects />
     </motion.div>
   );
 };
