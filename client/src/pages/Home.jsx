@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import FeatureProjects from "../components/FeatureProjects";
 import Hero from "../components/Hero";
+import DeliveredProjects from "../components/DeliveredProjects";
+import Testmonials from "../components/Testimonial";
 
 const Home = () => {
   return (
@@ -12,6 +14,8 @@ const Home = () => {
     >
       <Hero />
       <FeatureProjects />
+      <DeliveredProjects />
+      <Testmonials />
     </motion.div>
   );
 };

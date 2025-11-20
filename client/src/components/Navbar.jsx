@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaSun,
+  FaMoon,
+  FaRegUserCircle,
+} from "react-icons/fa";
 import { FiGithub, FiLinkedin, FiTwitter, FiDribbble } from "react-icons/fi";
+import { SiUnicode } from "react-icons/si";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,9 +45,6 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Projects", path: "/projects" },
-    { name: "About", path: "/about" },
-    { name: "Skills", path: "/skills" },
-    { name: "Contact", path: "/contact" },
   ];
 
   const socialLinks = [
@@ -55,16 +59,27 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`sticky top-0 w-full z-50 ${
-        scrolled ? "bg-white" : "border "
+      className={`sticky top-0 w-full mx-auto z-50 ${
+        scrolled
+          ? "bg-white"
+          : "border-b rounded-b-3xl md:rounded-b-full border-gray-400 bg-white/70 backdrop-blur-md"
       }`}
     >
-      <div className="container mx-auto px-6 py-4 ">
+      <div className="container w-full mx-auto px-6 md:px-12 lg:px-20 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-black">MB</span>
+          <motion.div
+            className="flex-1 justify-center items-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link to="/" className="flex items-center w-fit gap-2  ">
+              <h2 className="text-2xl font-bold flex items-center">
+                M
+                <span className="bg-gray-800 rounded-r-full px-2 text-white">
+                  B
+                </span>
+              </h2>
             </Link>
           </motion.div>
 
@@ -97,6 +112,17 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+
+            {/* Sign in  */}
+            <div className="">
+              <Link
+                to="/signin"
+                className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-colors"
+              >
+                <FaRegUserCircle />
+                Sign In
+              </Link>
+            </div>
 
             {/* Contact button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

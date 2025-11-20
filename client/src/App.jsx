@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Hireme from "./pages/Hireme";
 import ProjectForm from "./components/ProjectForm";
 import ProjectView from "./pages/ProjectView";
+import Notfound from "./pages/Notfound";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/hireme" element={<Hireme />} />
         <Route path="/add-project" element={<ProjectForm />} />
         <Route path="/projects/:Id" element={<ProjectView />} />
+        <Route path="/*" element={<Notfound />} />
       </Routes>
 
       <Footer />

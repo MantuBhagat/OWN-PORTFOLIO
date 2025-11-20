@@ -109,7 +109,8 @@ const Hireme = () => {
         <label className="block mb-4">
           <span className="text-gray-700">Timeline</span>
           <select
-            className="w-full border border-gray-300 py-2 mt-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            name="timeline"
+            className="w-full border border-gray-300 py-2  mt-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
             value={form.timeline}
             onChange={handleChange}
             required
@@ -117,10 +118,10 @@ const Hireme = () => {
             <option value="" className="font-semibold text-white bg-blue-500">
               Select a Timeline
             </option>
-            <option value="1-2 Weeks">1-2 Weeks</option>
-            <option value="1 Month">1 Month</option>
-            <option value="2-3 Months">2-3 Months</option>
-            <option value="More than 3 Months">More than 3 Months</option>
+            <option value="1-2 weeks">1-2 week</option>
+            <option value="1 month">1 month</option>
+            <option value="1-2 months">1-2 month</option>
+            <option value="3 months">3 months</option>
           </select>
         </label>
       </div>

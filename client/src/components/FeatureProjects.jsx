@@ -20,7 +20,8 @@ const FeatureProjects = () => {
     {
       title: "Project Three",
       description: "A brief description of Project Three.",
-      imageUrl: "https://via.placeholder.com/300",
+      imageUrl:
+        "https://plus.unsplash.com/premium_photo-1661510884617-232a2ba30dc2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2Vic2l0ZSUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
       projectLink: "#",
     },
     {
