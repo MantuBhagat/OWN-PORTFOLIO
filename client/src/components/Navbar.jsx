@@ -125,7 +125,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="p-2 rounded-full text-black hover:bg-gray-200 dark:hover:bg-gray-50 transition-colors"
+              className="p-2 rounded-full  transition-colors"
               aria-label="Toggle menu"
             >
               {isOpen ? <FaTimes /> : <FaBars />}
@@ -142,7 +142,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden  bg-white overflow-hidden"
+            className="md:hidden   overflow-hidden"
           >
             <div className="container mx-auto px-6 pb-4">
               <ul className="flex flex-col space-y-4 py-4">
@@ -158,7 +158,7 @@ const Navbar = () => {
                       className={`block px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                         location.pathname === link.path
                           ? "dark:bg-gray-800 bg-gray-100 dark:text-purple-400 text-purple-600"
-                          : " text-gray-700 hover:text-white hover:dark:bg-gray-800 hover:bg-gray-100"
+                          : " text-gray-700 hover:text-white hover:dark:bg-gray-100 hover:bg-gray-800"
                       }`}
                     >
                       {link.name}

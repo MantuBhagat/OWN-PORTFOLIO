@@ -19,7 +19,7 @@ const Hireme = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:5000/api/hireme`, form);
+      await axios.post(`/api/hireme`, form);
       alert("Message sent successfully!");
       setForm({
         name: "",
@@ -38,13 +38,13 @@ const Hireme = () => {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6"
+      className="mx-auto bg-white w-full  p-8 rounded-lg shadow-lg space-y-6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.2, duration: 0.6 }}
     >
-      <h2 className="text-3xl font-bold mb-2">Hire Me</h2>
-      <p className="text-gray-600">
+      <h2 className="text-3xl font-bold text-center mb-2">Hire Me</h2>
+      <p className="text-gray-600 text-center mb-6">
         Interested in working together? Fill out the form below to get in touch!
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -84,7 +84,7 @@ const Hireme = () => {
             onChange={handleChange}
             required
           >
-            <option value="" className="font-semibold text-blue-500">
+            <option value="" className="font-semibold text-white bg-blue-500">
               Select a Project Type
             </option>
             <option value="Web Development">Web development</option>
@@ -108,15 +108,20 @@ const Hireme = () => {
         </label>
         <label className="block mb-4">
           <span className="text-gray-700">Timeline</span>
-          <input
-            type="text"
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Project Timeline"
-            required
-            name="timeline"
+          <select
+            className="w-full border border-gray-300 py-2 mt-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
             value={form.timeline}
             onChange={handleChange}
-          />
+            required
+          >
+            <option value="" className="font-semibold text-white bg-blue-500">
+              Select a Timeline
+            </option>
+            <option value="1-2 Weeks">1-2 Weeks</option>
+            <option value="1 Month">1 Month</option>
+            <option value="2-3 Months">2-3 Months</option>
+            <option value="More than 3 Months">More than 3 Months</option>
+          </select>
         </label>
       </div>
 
