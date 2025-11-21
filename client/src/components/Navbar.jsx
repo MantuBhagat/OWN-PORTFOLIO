@@ -116,7 +116,7 @@ const Navbar = () => {
             {/* Sign in  */}
             <div className="">
               <Link
-                to="/signin"
+                to="/login"
                 className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-colors"
               >
                 <FaRegUserCircle />

@@ -10,6 +10,10 @@ import Hireme from "./pages/Hireme";
 import ProjectForm from "./components/ProjectForm";
 import ProjectView from "./pages/ProjectView";
 import Notfound from "./pages/Notfound";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 const App = () => {
   return (
@@ -26,6 +30,10 @@ const App = () => {
         <Route path="/add-project" element={<ProjectForm />} />
         <Route path="/projects/:Id" element={<ProjectView />} />
         <Route path="/*" element={<Notfound />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
 
       <Footer />
